@@ -46,11 +46,11 @@
     <div class="add-product">
         <form action="/add_product" method="POST">
             <label for="product_name">Termék neve:</label>
-            <input type="text" id="product_name" name="product_name" required>
+            <input type="text" id="product_name" name="termék_neve" required>
             <label for="product_description">Leírás:</label>
-            <input type="text" id="product_description" name="product_description" required>
+            <input type="text" id="product_description" name="leírás" required>
             <label for="product_price">Ár:</label>
-            <input type="number" id="product_price" name="product_price" required>
+            <input type="number" id="product_price" name="ára" required>
             <input type="submit" value="Hozzáadás">
         </form>
     </div>
@@ -70,7 +70,7 @@
                     <tr>
                         <td>{{ termek['ID'] }}</td>
                         <td>{{ termek['termék neve'] }}</td>
-                        <td>{{ termek['leírása'] }}</td>
+                        <td>{{ termek['leírás'] }}</td>
                         <td>{{ termek['ára'] }}</td>
                     </tr>
                     {% endfor %}

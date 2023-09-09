@@ -1,0 +1,86 @@
+[
+    {
+        "ID": 1,
+        "termék neve": "Laptop",
+        "leírás": "Hordozható számítógép nagy teljesítménnyel.",
+        "ára": 359000
+    },
+    {
+        "ID": 2,
+        "termék neve": "Okostelefon",
+        "leírás": "Modern okostelefon kiváló kamerával.",
+        "ára": 199000
+    },
+    {
+        "ID": 3,
+        "termék neve": "Televízió",
+        "leírás": "Nagy méretű HD televízió.",
+        "ára": 300000
+    },
+    {
+        "ID": 4,
+        "termék neve": "Kávéfőző",
+        "leírás": "Programozható kávéfőző.",
+        "ára": 2300
+    },
+    {
+        "ID": 5,
+        "termék neve": "Hűtőszekrény",
+        "leírás": "Nagy hűtőszekrény energiahatékonysággal.",
+        "ára": 199500
+    },
+    {
+        "ID": 6,
+        "termék neve": "Mikrohullámú sütő",
+        "leírás": "Mikrohullámú sütő gyors ételkészítéshez.",
+        "ára": 60000
+    },
+    {
+        "ID": 7,
+        "termék neve": "Fényképezőgép",
+        "leírás": "DSLR fényképezőgép professzionális felhasználóknak.",
+        "ára": 299000
+    },
+    {
+        "ID": 8,
+        "termék neve": "Asztali számítógép",
+        "leírás": "Erős asztali számítógép játékhoz és munkához.",
+        "ára": 516000
+    },
+    {
+        "ID": 9,
+        "termék neve": "Vezeték nélküli egér",
+        "leírás": "Kényelmes vezeték nélküli egér használathoz.",
+        "ára": 9000
+    },
+    {
+        "ID": 10,
+        "termék neve": "Hangszóró rendszer",
+        "leírás": "Magas minőségű hangszóró rendszer zenehallgatáshoz.",
+        "ára": 99000
+    },
+    {
+        "ID": 11,
+        "termék neve": "Doogee mobiltelefon",
+        "leírás": "Strapabíró mobil,komoly akkuval",
+        "ára": 1590000
+    },
+    {
+        "ID": 12,
+        "termék neve": "Vivobook",
+        "leírás": "Nagy teljesítményű laptop",
+        "ára": 425000
+    },
+    {
+        "ID": 13,
+        "termék neve": "LG televízió",
+        "leírás": "Nagyképernyős televízió",
+        "ára": "199000"
+    },
+    {
+        "ID": 14,
+        "termék neve": "Sűrített levegő spray",
+        "leírás": "Tisztító spray, szereléshez",
+        "ára": "990"
+    }
+]

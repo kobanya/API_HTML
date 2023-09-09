@@ -1,91 +1,53 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
+import json
 
 app = Flask(__name__)
 
-termek_lista = [
-    {
-        "ID": 1,
-        "termék neve": "Laptop",
-        "leírása": "Hordozható számítógép nagy teljesítménnyel.",
-        "ára": 359000
-    },
-    {
-        "ID": 2,
-        "termék neve": "Okostelefon",
-        "leírása": "Modern okostelefon kiváló kamerával.",
-        "ára": 199000
-    },
-    {
-        "ID": 3,
-        "termék neve": "Televízió",
-        "leírása": "Nagy méretű HD televízió.",
-        "ára": 300000
-    },
-    {
-        "ID": 4,
-        "termék neve": "Kávéfőző",
-        "leírása": "Programozható kávéfőző.",
-        "ára": 2300
-    },
-    {
-        "ID": 5,
-        "termék neve": "Hűtőszekrény",
-        "leírása": "Nagy hűtőszekrény energiahatékonysággal.",
-        "ára": 199500
-    },
-    {
-        "ID": 6,
-        "termék neve": "Mikrohullámú sütő",
-        "leírása": "Mikrohullámú sütő gyors ételkészítéshez.",
-        "ára": 60000
-    },
-    {
-        "ID": 7,
-        "termék neve": "Fényképezőgép",
-        "leírása": "DSLR fényképezőgép professzionális felhasználóknak.",
-        "ára": 299000
-    },
-    {
-        "ID": 8,
-        "termék neve": "Asztali számítógép",
-        "leírása": "Erős asztali számítógép játékhoz és munkához.",
-        "ára": 516000
-    },
-    {
-        "ID": 9,
-        "termék neve": "Vezeték nélküli egér",
-        "leírása": "Kényelmes vezeték nélküli egér használathoz.",
-        "ára": 9000
-    },
-    {
-        "ID": 10,
-        "termék neve": "Hangszóró rendszer",
-        "leírása": "Magas minőségű hangszóró rendszer zenehallgatáshoz.",
-        "ára": 99000
-    }
-]
+# Az alkalmazás indításakor olvasd be az adatokat a JSON fájlból
+def load_data():
+    try:
+        with open('termek_lista.json', 'r', encoding='utf-8') as json_file:
+            data = json.load(json_file)
+        return data
+    except FileNotFoundError:
+        return []
 
+termek_lista = load_data()
+
+# Főoldal, a terméklista megjelenítése
 @app.route('/')
 def index():
     return render_template('termek_lista.html', termek_lista=termek_lista)
 
+# Új termék hozzáadása
 @app.route('/add_product', methods=['POST'])
 def add_product():
     if request.method == 'POST':
-        uj_termek_neve = request.form['product_name']
-        uj_termek_leirasa = request.form['product_description']
-        uj_termek_ara = float(request.form['product_price'])
-        ID = termek_lista[-1]['ID'] + 1
+        # Új termék adatainak lekérése a formból
+        uj_termek_neve = request.form['termék_neve']
+        uj_termek_leirasa = request.form['leírás']
+        uj_termek_ara = request.form['ára']
 
+        # Az új termék objektum létrehozása
+        ID = len(termek_lista) + 1
         uj_termek = {
+            "ID": ID,
             "termék neve": uj_termek_neve,
-            "leírása": uj_termek_leirasa,
-            "ára": uj_termek_ara,
-            "ID": ID
+            "leírás": uj_termek_leirasa,
+            "ára": uj_termek_ara
         }
 
+        # Az új termék hozzáadása a termek_lista-hoz
         termek_lista.append(uj_termek)
-        return redirect(url_for('index'))
+
+        # Az új termék mentése JSON fájlba
+        with open('termek_lista.json', 'w', encoding='utf-8') as json_file:
+            json.dump(termek_lista, json_file, ensure_ascii=False, indent=4)
+
+        return redirect('/')
+
+
+
 
 if __name__ == '__main__':
     app.run()
