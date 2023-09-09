@@ -26,7 +26,7 @@ def add_product():
         # Új termék adatainak lekérése a formból
         uj_termek_neve = request.form['termék_neve']
         uj_termek_leirasa = request.form['leírás']
-        uj_termek_ara = request.form['ára']
+        uj_termek_ara = int (request.form['ára'])
 
         # Az új termék objektum létrehozása
         ID = len(termek_lista) + 1

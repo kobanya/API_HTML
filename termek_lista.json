@@ -75,7 +75,7 @@
         "ID": 13,
         "termék neve": "LG televízió",
         "leírás": "Nagyképernyős televízió",
-        "ára": "199000"
+        "ára": 199000
     },
     {
         "ID": 14,
@@ -87,7 +87,7 @@
         "ID": 15,
         "termék neve": "Acer laptop",
         "leírás": "Nagyteljesítményű laptop",
-        "ára": "299000"
+        "ára": 299000
     },
     {
         "ID": 16,
@@ -183,6 +183,18 @@
         "ID": 31,
         "termék neve": "Külső SSD merevlemez 1Tb",
         "leírás": "Gyors , törésálló horgozható merevlemez",
-        "ára": "50000"
+        "ára": 27000
+    },
+    {
+        "ID": 32,
+        "termék neve": "USB adattároló",
+        "leírás": "USB 3.0  hordozható adattároló",
+        "ára": 2000
+    },
+    {
+        "ID": 33,
+        "termék neve": "Kávéfőző",
+        "leírás": "Automata kévéfőző",
+        "ára": 99000
     }
 ]
