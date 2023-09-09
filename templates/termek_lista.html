@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terméklista</title>
+</head>
+<body>
+    <h1>Terméklista</h1>
+    <ul>
+        {% for termek in termek_lista %}
+        <li>
+            <strong>Termék neve:</strong> {{ termek['termék neve'] }}<br>
+            <strong>Leírás:</strong> {{ termek['leírása'] }}<br>
+            <strong>Ár:</strong> {{ termek['ára'] }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
