@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -64,11 +64,28 @@ termek_lista = [
         "ára": 99000
     }
 ]
+
 @app.route('/')
 def index():
     return render_template('termek_lista.html', termek_lista=termek_lista)
 
-if __name__ == '__main__':
-    app.run(
+@app.route('/add_product', methods=['POST'])
+def add_product():
+    if request.method == 'POST':
+        uj_termek_neve = request.form['product_name']
+        uj_termek_leirasa = request.form['product_description']
+        uj_termek_ara = float(request.form['product_price'])
+        ID = termek_lista[-1]['ID'] + 1
 
-    )
+        uj_termek = {
+            "termék neve": uj_termek_neve,
+            "leírása": uj_termek_leirasa,
+            "ára": uj_termek_ara,
+            "ID": ID
+        }
+
+        termek_lista.append(uj_termek)
+        return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run()

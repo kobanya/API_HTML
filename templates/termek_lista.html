@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Terméklista</title>
+    <title>NAGY műszaki bolt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .add-product {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .add-product label {
+            display: block;
+        }
+        .product-table {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .product-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-table th, .product-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .product-table th {
+            background-color: #f2f2f2;
+        }
+        .scrollable-table {
+            height: 400px;
+            overflow-y: scroll;
+        }
+    </style>
 </head>
 <body>
-    <h1>Terméklista</h1>
-    <ul>
-        {% for termek in termek_lista %}
-        <li>
-            <strong>Termék neve:</strong> {{ termek['termék neve'] }}<br>
-            <strong>Leírás:</strong> {{ termek['leírása'] }}<br>
-            <strong>Ár:</strong> {{ termek['ára'] }}<br>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="header">NAGY műszaki bolt</div>
+    <div class="add-product">
+        <form action="/add_product" method="POST">
+            <label for="product_name">Termék neve:</label>
+            <input type="text" id="product_name" name="product_name" required>
+            <label for="product_description">Leírás:</label>
+            <input type="text" id="product_description" name="product_description" required>
+            <label for="product_price">Ár:</label>
+            <input type="number" id="product_price" name="product_price" required>
+            <input type="submit" value="Hozzáadás">
+        </form>
+    </div>
+    <div class="scrollable-table">
+        <div class="product-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Termék neve</th>
+                        <th>Leírás</th>
+                        <th>Ár</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for termek in termek_lista %}
+                    <tr>
+                        <td>{{ termek['ID'] }}</td>
+                        <td>{{ termek['termék neve'] }}</td>
+                        <td>{{ termek['leírása'] }}</td>
+                        <td>{{ termek['ára'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
