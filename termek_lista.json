@@ -82,5 +82,107 @@
         "termék neve": "Sűrített levegő spray",
         "leírás": "Tisztító spray, szereléshez",
         "ára": "990"
+    },
+    {
+        "ID": 15,
+        "termék neve": "Acer laptop",
+        "leírás": "Nagyteljesítményű laptop",
+        "ára": "299000"
+    },
+    {
+        "ID": 16,
+        "termék neve": "LG Okostelefon",
+        "leírás": "Kiváló minőségű okostelefon érintőképernyővel.",
+        "ára": 129900
+    },
+    {
+        "ID": 17,
+        "termék neve": "Googee Tablet",
+        "leírás": "10 hüvelykes tablet gyors processzorral.",
+        "ára": 79900
+    },
+    {
+        "ID": 18,
+        "termék neve": "4K Smart TV",
+        "leírás": "55 hüvelykes 4K felbontású okos televízió.",
+        "ára": 249900
+    },
+    {
+        "ID": 19,
+        "termék neve": "Gamer Laptop",
+        "leírás": "Erőteljes gamer laptop RGB világítással.",
+        "ára": 429000
+    },
+    {
+        "ID": 20,
+        "termék neve": "Olympos Digitális fényképezőgép",
+        "leírás": "20 megapixeles digitális fényképezőgép zoom objektívvel.",
+        "ára": 179900
+    },
+    {
+        "ID": 21,
+        "termék neve": "LG Wireless egér",
+        "leírás": "Optikai vezeték nélküli egér hosszú akkumulátor-élettartammal.",
+        "ára": 4990
+    },
+    {
+        "ID": 22,
+        "termék neve": "Okos otthon rendszer",
+        "leírás": "Intelligens otthoni rendszer okostelefon alkalmazással.",
+        "ára": 59900
+    },
+    {
+        "ID": 23,
+        "termék neve": "Hangszórórendszer",
+        "leírás": "5.1 csatornás hangszórórendszer moziélményhez.",
+        "ára": 69900
+    },
+    {
+        "ID": 24,
+        "termék neve": "Külső merevlemez",
+        "leírás": "2TB tárolási kapacitású külső merevlemez USB 3.0 csatlakozással.",
+        "ára": 22990
+    },
+    {
+        "ID": 25,
+        "termék neve": "VR headset",
+        "leírás": "Virtual Reality headset kiváló játékélményhez.",
+        "ára": 79900
+    },
+    {
+        "ID": 26,
+        "termék neve": "Mechanikus billentyűzet",
+        "leírás": "Mechanikus gaming billentyűzet RGB háttérvilágítással.",
+        "ára": 14990
+    },
+    {
+        "ID": 27,
+        "termék neve": "Bluetooth fülhallgató",
+        "leírás": "Vezeték nélküli Bluetooth fülhallgató aktív zajszűréssel.",
+        "ára": 7990
+    },
+    {
+        "ID": 28,
+        "termék neve": "Robot porszívó",
+        "leírás": "Automatizált robot porszívó takarítási programokkal.",
+        "ára": 49900
+    },
+    {
+        "ID": 29,
+        "termék neve": "Sztereó fejhallgató",
+        "leírás": "Kiváló minőségű sztereó fejhallgató kényelmes viselettel.",
+        "ára": 5990
+    },
+    {
+        "ID": 30,
+        "termék neve": "Egyetemi Laptop",
+        "leírás": "Könnyű és hordozható laptop egyetemi hallgatóknak.",
+        "ára": 99900
+    },
+    {
+        "ID": 31,
+        "termék neve": "Külső SSD merevlemez 1Tb",
+        "leírás": "Gyors , törésálló horgozható merevlemez",
+        "ára": "50000"
     }
 ]
