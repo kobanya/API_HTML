@@ -1,7 +1,7 @@
 [
     {
         "ID": 1,
-        "termék neve": "Laptop",
+        "termék neve": "Acer",
         "leírás": "Hordozható számítógép nagy teljesítménnyel.",
         "ára": 359000
     },
@@ -81,7 +81,7 @@
         "ID": 14,
         "termék neve": "Sűrített levegő spray",
         "leírás": "Tisztító spray, szereléshez",
-        "ára": "990"
+        "ára": 990
     },
     {
         "ID": 15,
@@ -187,14 +187,62 @@
     },
     {
         "ID": 32,
-        "termék neve": "USB adattároló",
+        "termék neve": "USB adattároló 5GB",
         "leírás": "USB 3.0  hordozható adattároló",
-        "ára": 2000
+        "ára": "1990"
     },
     {
         "ID": 33,
         "termék neve": "Kávéfőző",
         "leírás": "Automata kévéfőző",
         "ára": 99000
+    },
+    {
+        "ID": 34,
+        "termék neve": "Tejhabosító",
+        "leírás": "Kávékészítéshez, tejhabosításra",
+        "ára": 15000
+    },
+    {
+        "ID": 35,
+        "termék neve": "HP laptop",
+        "leírás": "iskolai használatra konfigurált laptol",
+        "ára": 149000
+    },
+    {
+        "ID": 36,
+        "termék neve": "Samsung telvízió",
+        "leírás": "nagyképernyős 8K tv",
+        "ára": 399000
+    },
+    {
+        "ID": 37,
+        "termék neve": "Samsung DVD író",
+        "leírás": "retro DVD író ",
+        "ára": 5990
+    },
+    {
+        "ID": 38,
+        "termék neve": "Samsung DVD lejátszó",
+        "leírás": "retro DVD lejátszó ",
+        "ára": 5990
+    },
+    {
+        "ID": 39,
+        "termék neve": "Samsung 4K monitor",
+        "leírás": "számítógép monitor 4k felbontással",
+        "ára": 52000
+    },
+    {
+        "ID": 40,
+        "termék neve": "USB mobiltöltő",
+        "leírás": "mobiltelefon töltő",
+        "ára": 1990
+    },
+    {
+        "ID": 41,
+        "termék neve": "TV okosító",
+        "leírás": "TV smart box USB és HDM catlakozással",
+        "ára": 19000
     }
 ]

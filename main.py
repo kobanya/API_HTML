@@ -26,7 +26,7 @@ def add_product():
         # Új termék adatainak lekérése a formból
         uj_termek_neve = request.form['termék_neve']
         uj_termek_leirasa = request.form['leírás']
-        uj_termek_ara = int (request.form['ára'])
+        uj_termek_ara = int(request.form['ára'])
 
         # Az új termék objektum létrehozása
         ID = len(termek_lista) + 1
@@ -46,8 +46,26 @@ def add_product():
 
         return redirect('/')
 
+# Termék módosítása
+@app.route('/modify_product', methods=['POST'])
+def modify_product():
+    if request.method == 'POST':
+        # Módosított termék adatainak lekérése a formból
+        modified_id = int(request.form['modified_id'])
+        modified_field = request.form['modified_field']
+        modified_value = request.form['modified_value']
 
+        # A termék módosítása a termek_lista-ban
+        for termek in termek_lista:
+            if termek['ID'] == modified_id:
+                termek[modified_field] = modified_value
+                break
 
+        # A módosított termék mentése JSON fájlba
+        with open('termek_lista.json', 'w', encoding='utf-8') as json_file:
+            json.dump(termek_lista, json_file, ensure_ascii=False, indent=4)
+
+        return redirect('/')
 
 if __name__ == '__main__':
     app.run()
