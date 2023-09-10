@@ -1,7 +1,7 @@
 [
     {
         "ID": 1,
-        "termék neve": "Acer",
+        "termék neve": "ACER 12N",
         "leírás": "Hordozható számítógép nagy teljesítménnyel.",
         "ára": 359000
     },
@@ -193,7 +193,7 @@
     },
     {
         "ID": 33,
-        "termék neve": "Kávéfőző",
+        "termék neve": "Delonghi kávéfőző",
         "leírás": "Automata kévéfőző",
         "ára": 99000
     },
@@ -241,8 +241,20 @@
     },
     {
         "ID": 41,
-        "termék neve": "TV okosító",
+        "termék neve": "Smartech tv okosító USB és HDMI csatlakozóval",
         "leírás": "TV smart box USB és HDM catlakozással",
         "ára": 19000
+    },
+    {
+        "ID": 42,
+        "termék neve": "HP lézeres nyomtató",
+        "leírás": "Lézer technológiás nyomtató",
+        "ára": 59000
+    },
+    {
+        "ID": 43,
+        "termék neve": "JVC  Videomagnó",
+        "leírás": "retró videomagnó VSH kazetták lejétszására",
+        "ára": 25000
     }
 ]

@@ -52,25 +52,44 @@
         .add-product-fields input {
             margin-bottom: 10px;
             padding: 5px;
-            width: 30%;
+            width: 20%;
         }
+        /* Módosítás űrlap és gomb */
+        .modify-form {
+            display: none;
+        }
+        .modify-form input[type="text"] {
+            width: auto;
+        }
+        .modify-button {
+            cursor: pointer;
+            color: blue;
+        }
+        .readonly-cell {
+    background-color: #f9f9f9; /* Háttérszín megadása */
+    pointer-events: none; /* Ne lehessen rájuk kattintani */
+}
+
     </style>
 </head>
 <body>
     <div class="header">NAGY műszaki áruház</div>
 
-    <!-- Új termék hozzáadása űrlap -->
-    <div class="add-product">
-        <div class="add-product-fields">
+ <!-- Új termék hozzáadása űrlap -->
+<div class="add-product">
+    <div class="add-product-fields">
+        <form action="/add_product" method="POST"> <!-- Új form elem -->
             <label for="product_name">Termék neve:</label>
             <input type="text" id="product_name" name="termék_neve" required>
             <label for="product_description">Leírás:</label>
             <input type="text" id="product_description" name="leírás" required>
             <label for="product_price">Ár:</label>
             <input type="number" id="product_price" name="ára" required>
-            <input type="submit" value="Új termék hozzáadása">
-        </div>
+            <input type="submit" value="Új termék mentése">
+        </form>
     </div>
+</div>
+
 
     <!-- Termék táblázat -->
     <div class="scrollable-table">
@@ -81,19 +100,20 @@
                         <th>ID</th>
                         <th>Termék neve</th>
                         <th>Leírás</th>
-                        <th>Ár forintban</th>
-                        <th>Módosítás</th>
+                        <th>Ár</th>
+                        <th>Módosít</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for termek in termek_lista %}
                     <tr>
                         <td>{{ termek['ID'] }}</td>
-                        <td>{{ termek['termék neve'] }}</td>
-                        <td>{{ termek['leírás'] }}</td>
-                        <td>{{ termek['ára'] }}</td>
+                        <td class="readonly-cell" data-field="termék neve">{{ termek['termék neve'] }}</td>
+                        <td class="readonly-cell" data-field="leírás">{{ termek['leírás'] }}</td>
+                        <td class="editabl" data-field="ára">{{ termek['ára'] }}</td>
                         <td>
-                            <form action="/modify_product" method="POST">
+                            <span class="modify-button">Módosít</span>
+                            <form class="modify-form" action="/modify_product" method="POST">
                                 <input type="hidden" name="modified_id" value="{{ termek['ID'] }}">
                                 <select name="modified_field">
                                     <option value="termék neve">Termék neve</option>
@@ -110,5 +130,27 @@
             </table>
         </div>
     </div>
+
+    <script>
+        // JavaScript kód a szerkeszthető mezők kezeléséhez
+        const editableFields = document.querySelectorAll('.editable');
+        const modifyButtons = document.querySelectorAll('.modify-button');
+        const modifyForms = document.querySelectorAll('.modify-form');
+
+        // Kattintáskor szerkeszthetővé teszi a mezőt
+        editableFields.forEach(field => {
+            field.addEventListener('click', () => {
+                field.contentEditable = 'true';
+                field.style.backgroundColor = '#FFFFCC';
+            });
+        });
+
+        // Módosít gomb kattintásának kezelése
+        modifyButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                modifyForms[index].style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
